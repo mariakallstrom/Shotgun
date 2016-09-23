@@ -33,6 +33,7 @@
             this.BtnPlay = new System.Windows.Forms.Button();
             this.BtnQuit = new System.Windows.Forms.Button();
             this.LblTitle = new System.Windows.Forms.Label();
+            this.BtnGameRules = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicStart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.BtnPlay.Name = "BtnPlay";
             this.BtnPlay.Size = new System.Drawing.Size(109, 46);
             this.BtnPlay.TabIndex = 1;
-            this.BtnPlay.Text = "Starta spel";
+            this.BtnPlay.Text = "SPELA";
             this.BtnPlay.UseVisualStyleBackColor = true;
             this.BtnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
@@ -61,7 +62,7 @@
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Size = new System.Drawing.Size(108, 46);
             this.BtnQuit.TabIndex = 2;
-            this.BtnQuit.Text = "Avsluta spel";
+            this.BtnQuit.Text = "AVSLUTA";
             this.BtnQuit.UseVisualStyleBackColor = true;
             this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -75,11 +76,23 @@
             this.LblTitle.TabIndex = 3;
             this.LblTitle.Text = "SHOTGUN";
             // 
+            // BtnGameRules
+            // 
+            this.BtnGameRules.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnGameRules.Location = new System.Drawing.Point(457, 271);
+            this.BtnGameRules.Name = "BtnGameRules";
+            this.BtnGameRules.Size = new System.Drawing.Size(114, 43);
+            this.BtnGameRules.TabIndex = 7;
+            this.BtnGameRules.Text = "Spelregler";
+            this.BtnGameRules.UseVisualStyleBackColor = true;
+            this.BtnGameRules.Click += new System.EventHandler(this.BtnGameRules_Click);
+            // 
             // FormStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 332);
+            this.Controls.Add(this.BtnGameRules);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.BtnQuit);
             this.Controls.Add(this.BtnPlay);
@@ -99,6 +112,7 @@
         private System.Windows.Forms.Button BtnPlay;
         private System.Windows.Forms.Button BtnQuit;
         private System.Windows.Forms.Label LblTitle;
+        private System.Windows.Forms.Button BtnGameRules;
     }
 }
 

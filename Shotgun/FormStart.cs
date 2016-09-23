@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shotgun
@@ -28,5 +21,40 @@ namespace Shotgun
             fg.Show();
             Hide();
         }
+        
+
+        public void FormRules_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Do whatever you want here
+        }
+
+        public void BtnGameRules_Click(object sender, EventArgs e)
+        {
+            OpenForm();
+          
+        }
+
+        private void OpenForm()
+        {
+            var form2 = new FormRules();
+            form2.FormClosing += FormIsClosing;
+            form2.Show();
+
+            this.Hide();
+        }
+
+        private void FormIsClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.Cancel)
+            {
+                return;
+            }
+
+            Show();
+            Update();
+        }
     }
-}
+
+
+    }
+

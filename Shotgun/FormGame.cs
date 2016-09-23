@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-
-namespace Shotgun
-
 //npcBlock = 1;
 //npcShoot = 2;
 //npcLoad = 3;
@@ -12,6 +9,8 @@ namespace Shotgun
 //playShoot = 2;
 //playLoad = 3;
 //playShotgun = 4;
+
+namespace Shotgun
 {
     public partial class FormGame : Form
     {
@@ -20,10 +19,10 @@ namespace Shotgun
             InitializeComponent();
         }
 
-
         private void BtnStartGame_Click(object sender, EventArgs e)
         {
             SetAmmoStartGame();
+            SetPointNewGame();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)
@@ -37,33 +36,82 @@ namespace Shotgun
                 var x = Npc();
                 PlayerLoadsComputer(x);
             }
-
         }
 
         private void BtnBlock_Click(object sender, EventArgs e)
         {
-            var x = Npc();
-            PlayerBlocksComputer(x);
-        }
-
-        private void BtnShoot_Click(object sender, EventArgs e)
-        {
-            if (GetPlayerAmmo() == 0)
+            var ammoP = LblAmmoCountPlay.Text;
+            if (ammoP == "")
             {
-                MessageBox.Show(@"Du har inga skott!");
+                MessageBox.Show(@"Du måste starta spelet");
+            
             }
             else
             {
                 var x = Npc();
-                PlayerShootsComputer(x);
+                PlayerBlocksComputer(x);
             }
 
         }
 
+        private void BtnShoot_Click(object sender, EventArgs e)
+        {
+            var ammoP = LblAmmoCountPlay.Text;
+            if (ammoP == "")
+            {
+                MessageBox.Show(@"Du måste starta spelet");
+            }
+            else
+            {
+                if (GetPlayerAmmo() == 0)
+                {
+                    MessageBox.Show(@"Du har inga skott!");
+                }
+                else
+                {
+                    var x = Npc();
+                    PlayerShootsComputer(x);
+                }
+            }
+         
+        }
+
         private void BtnShotgun_Click(object sender, EventArgs e)
         {
-            var x = Npc();
-            PlayerShotgunsComputer(x);
+            var ammoP = LblAmmoCountPlay.Text;
+            if (ammoP == "")
+            {
+                MessageBox.Show(@"Du måste starta spelet");
+            }
+            else
+            {
+                var x = GetPlayerAmmo();
+
+                if (x < 3)
+                {
+                    MessageBox.Show(@"Du har för lite skott!");
+
+                }
+                else
+                {
+                    var n = Npc();
+                    PlayerShotgunsComputer(n);
+                }
+            }
+           
+        }
+
+        public void SetAmmoStartGame()
+        {
+            SetNpcAmmo(0);
+            SetPlayerAmmo(0);
+
+        }
+
+        public void SetPointNewGame()
+        {
+            SetNpcPoints(0);
+            SetPlayersPoint(0);
         }
 
         public void PlayerBlocksComputer(int npc)
@@ -88,30 +136,47 @@ namespace Shotgun
                 }
                 else if (npc == 4)
                 {
-                    MessageBox.Show(@"Datorn vann!");
+                    MessageBox.Show(@"Blocka ot Shotgun, datorn fick poäng!");
+                    NpcWinPoint();
+                    SetAmmoStartGame();
                 }
             }
         }
         public void PlayerShootsComputer(int npc)
         {
             var pShoot = PlayerShoot();
-            if (pShoot != npc)
+            if (pShoot == npc)
             {
-                if (npc == 1)
+                MessageBox.Show(@"Skjuta mot skjuta");
+                NpcLooseAmmo();
+                PlayerLooseAmmo();
+            }
+            else
+            {
+                if (pShoot != npc)
                 {
-                    MessageBox.Show(@"Skjuta mot Blocka");
-                    PlayerLooseAmmo(); 
-                }
-               else if (npc == 3)
-                {
-                    MessageBox.Show(@"Du vann!");
-                }
-                else if (npc == 4)
-                {
-                    MessageBox.Show(@"Datorn vann!");
+                    if (npc == 1)
+                    {
+                        MessageBox.Show(@"Skjuta mot Blocka");
+                        PlayerLooseAmmo();
+                    }
+                    else if (npc == 3)
+                    {
+                        MessageBox.Show(@"Skjuta mot ladda. Du fick poäng!");
+                        PlayerWinPoint();
+                        SetAmmoStartGame();
+                    }
+                    else if (npc == 4)
+                    {
+                        MessageBox.Show(@"Datorn fick poäng!");
+                        NpcWinPoint();
+                        SetAmmoStartGame();
+                    }
                 }
             }
+           
         }
+
         public void PlayerLoadsComputer(int npc)
         {
             if (PlayerLoad() == npc)
@@ -128,32 +193,55 @@ namespace Shotgun
                 }
                 else if (npc == 2)
                 {
-                    MessageBox.Show(@"Datorn vann!");
+                    MessageBox.Show(@"Ladda mot skjuta. Datorn fick poäng!");
+                    NpcWinPoint();
+                    SetAmmoStartGame();
                 }
                 else if (npc == 4)
                 {
-                    MessageBox.Show(@"Datorn vann!");
+                    MessageBox.Show(@"Ladda mot shotgun. Datorn fick poäng!");
+                    NpcWinPoint();
+                    SetAmmoStartGame();
                 }
             }
         }
+
         public void PlayerShotgunsComputer(int npc)
         {
-            if (PlayerShotgun() != npc)
+            if (PlayerShotgun() == npc)
             {
-                MessageBox.Show(@"Du vann!");
+                MessageBox.Show(@"Shotgun mot Shotgun");
+                PlayerLooseAmmo();
+                NpcLooseAmmo();
+            }
+            else
+            {
+           
+            if (npc == 1)
+                {
+                    MessageBox.Show(@"Shotgun mot blocka! Du fick poäng!");
+                    PlayerWinPoint();
+                    SetAmmoStartGame();
+                }
+                else if (npc == 2)
+                {
+                    MessageBox.Show(@"Shotgun mot Skjuta! Du fick poäng!");
+                   PlayerWinPoint();
+                    SetAmmoStartGame();
+                }
+                else if (npc == 3)
+                {
+                    MessageBox.Show(@"Shotgun mot Ladda! Du fick poäng!");
+                   PlayerWinPoint();
+                    SetAmmoStartGame();
+                }
             }
         }
-        
-        public void SetAmmoStartGame()
-        {
-            SetPlayerAmmo(0);
-            SetNpcAmmo(0);
-        }
+
         public int PlayerLoad()
         {
             return 3;
         }
-
 
         public int PlayerShoot()
         {
@@ -167,14 +255,7 @@ namespace Shotgun
 
         public int PlayerShotgun()
         {
-            var x = GetPlayerAmmo();
-
-            if (x < 3)
-            {
-                MessageBox.Show(@"Du har för lite skott!");
-                return 0;
-            }
-               
+            
                 return 4;
         }
 
@@ -185,17 +266,12 @@ namespace Shotgun
             SetPlayerAmmo(pAmmo);
         }
 
-
-
         public void PlayerLooseAmmo()
         {
             var pAmmo = GetPlayerAmmo();
             pAmmo--;
             SetPlayerAmmo(pAmmo);
         }
-
-
-
 
         public void NpcGetAmmo()
         {
@@ -245,11 +321,14 @@ namespace Shotgun
             return x;
         }
 
-
-
-
         public int GetNpcAmmo()
         {
+            var ammoN = LblAmmoCountNpc.Text;
+            if (ammoN == "")
+            {
+                MessageBox.Show(@"Du måste starta spelet");
+                return 0;
+            }
             var nAmmo = Convert.ToInt32(LblAmmoCountNpc.Text);
             return nAmmo;
         }
@@ -262,31 +341,91 @@ namespace Shotgun
 
         public int GetPlayerAmmo()
         {
-            var pAmmo = Convert.ToInt32(LblAmmoCountPlay.Text);
-            return pAmmo;
-        }
+            var ammoP = LblAmmoCountPlay.Text;
+            if (ammoP == "")
+            {
+                MessageBox.Show(@"Du måste starta spelet");
+                return 0;
+            }
+                var pAmmo = Convert.ToInt32(LblAmmoCountPlay.Text);
+                return pAmmo;
+            }
 
         public void SetPlayerAmmo(int pAmmo)
         {
             LblAmmoCountPlay.Text = pAmmo.ToString();
         }
 
-    
+        private void BtnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+        public int GetPlayerPoints()
+        {
+            var pPoint = Convert.ToInt32(LblPointsPlay.Text);
+            return pPoint;
+        }
 
+        public void SetPlayersPoint(int pPoint)
+        {
+            LblPointsPlay.Text = pPoint.ToString();
+        }
 
+        public int GetNpcPoints()
+        {
+            var nPoint = Convert.ToInt32(LblPointsNPC.Text);
+            return nPoint;
+        }
 
+        public void SetNpcPoints(int nPoint)
+        {
+            LblPointsNPC.Text = nPoint.ToString();
+        }
 
-        // QuitGame
+        public void PlayerWinPoint()
+        {
+            var pPoint = GetPlayerPoints();
+            pPoint++;
+            SetPlayersPoint(pPoint);
+            PointsCount();
+        
+        }
 
+        public void NpcWinPoint()
+        {
+            var nPoint = GetNpcPoints();
+            nPoint++;
+            SetNpcPoints(nPoint);
+            PointsCount();
+        }
 
+        public void PointsCount()
+        {
+            var nPoint = GetNpcPoints();
+            var pPoint = GetPlayerPoints();
 
-        //Ladda mot ladda: Båda spelarna får ett skott
-        //Ladda mot blocka Spelaren som laddar får ett skott
-        //Blocka mot blocka Ingenting händer
-        //Skjuta mot blocka Spelaren som skjuter förlorar ett skott
-        //Skjuta mot skjuta Båda spelarna förlorar ett skott
-        //Skjuta mot ladda Spelaren som skjuter vinner spelet
+            if (nPoint == 3)
+            {
+                MessageBox.Show(@"Datorn vann!");
+                StartNewGame();
+            }
+            if (pPoint == 3)
+            {
+                MessageBox.Show(@"Du vann!");
+                StartNewGame();
+            }
+        }
+
+        public void StartNewGame()
+        {
+            LblAmmoCountPlay.Text = "";
+            LblAmmoCountNpc.Text = "";
+            LblPointsNPC.Text = "";
+            LblPointsPlay.Text = "";
+            Application.Run(this);
+        }
+
 
     }
 }
