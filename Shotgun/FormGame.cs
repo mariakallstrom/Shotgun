@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Shotgun.PlayerVsNpcPics;
+using Shotgun.PointForm;
 
 //npcBlock = 1;
 //npcShoot = 2;
@@ -66,7 +67,8 @@ namespace Shotgun
             {
                 if (GetPlayerAmmo() == 0)
                 {
-                    MessageBox.Show(@"Du har inga skott!");
+                    NoBullets no = new NoBullets();
+                    no.Show();
                 }
                 else
                 {
@@ -90,7 +92,8 @@ namespace Shotgun
 
                 if (x < 3)
                 {
-                    MessageBox.Show(@"Du har för lite skott!");
+                    NoBullets no = new NoBullets();
+                    no.Show();
 
                 }
                 else
@@ -117,6 +120,9 @@ namespace Shotgun
 
         public void PlayerBlocksComputer(int npc)
         {
+            OnePointToNpc point = new OnePointToNpc();
+            
+
             var pBlock = PlayerBlock();
 
             if (pBlock == npc)
@@ -142,6 +148,7 @@ namespace Shotgun
                 {
                     BlockVsShotgun load = new BlockVsShotgun();
                     load.Show();
+                    point.Show();
                     NpcWinPoint();
                     SetAmmoStartGame();
                 }
@@ -149,6 +156,8 @@ namespace Shotgun
         }
         public void PlayerShootsComputer(int npc)
         {
+            OnePointToNpc point = new OnePointToNpc();
+            PlayerOnePoint win = new PlayerOnePoint();
             var pShoot = PlayerShoot();
             if (pShoot == npc)
             {
@@ -171,6 +180,7 @@ namespace Shotgun
                     {
                         ShootVsLoad load = new ShootVsLoad();
                         load.Show();
+                        win.Show();
                         PlayerWinPoint();
                         SetAmmoStartGame();
                     }
@@ -178,6 +188,7 @@ namespace Shotgun
                     {
                         ShotgunVSShotgun load = new ShotgunVSShotgun();
                         load.Show();
+                        point.Show();
                         NpcWinPoint();
                         SetAmmoStartGame();
                     }
@@ -188,6 +199,7 @@ namespace Shotgun
 
         public void PlayerLoadsComputer(int npc)
         {
+           OnePointToNpc point = new OnePointToNpc();
             if (PlayerLoad() == npc)
             {
                 LoadVsLoad load = new LoadVsLoad();
@@ -207,6 +219,7 @@ namespace Shotgun
                 {
                    LoadVsShoot load = new LoadVsShoot();
                     load.Show();
+                    point.Show();
                     NpcWinPoint();
                     SetAmmoStartGame();
                 }
@@ -214,6 +227,7 @@ namespace Shotgun
                 {
                    LoadVsShotgun load = new LoadVsShotgun();
                     load.Show();
+                    point.Show();
                     NpcWinPoint();
                     SetAmmoStartGame();
                 }
@@ -222,6 +236,7 @@ namespace Shotgun
 
         public void PlayerShotgunsComputer(int npc)
         {
+            PlayerOnePoint point = new PlayerOnePoint();
             if (PlayerShotgun() == npc)
             {
                 ShotgunVSShotgun load = new ShotgunVSShotgun();
@@ -236,6 +251,7 @@ namespace Shotgun
                 {
                     ShotgunVsBlock load = new ShotgunVsBlock();
                     load.Show();
+                    point.Show();
                     PlayerWinPoint();
                     SetAmmoStartGame();
                 }
@@ -243,6 +259,7 @@ namespace Shotgun
                 {
                    ShotgunVsShoot load = new ShotgunVsShoot();
                     load.Show();
+                    point.Show();
                    PlayerWinPoint();
                     SetAmmoStartGame();
                 }
@@ -250,6 +267,7 @@ namespace Shotgun
                 {
                    ShotgunVsLoad load = new ShotgunVsLoad();
                     load.Show();
+                    point.Show();
                    PlayerWinPoint();
                     SetAmmoStartGame();
                 }
@@ -418,19 +436,37 @@ namespace Shotgun
             PointsCount();
         }
 
+        public int GetChoosedScore()
+        {
+            if (TxtChoose.Text == "")
+            {
+                SetChoosedScore(3);
+            }
+            var choosedScore = int.Parse(TxtChoose.Text);
+            return choosedScore;
+        }
+
+        public void SetChoosedScore(int choosedScore)
+        {
+            TxtChoose.Text = choosedScore.ToString();
+        }
+
         public void PointsCount()
         {
             var nPoint = GetNpcPoints();
             var pPoint = GetPlayerPoints();
 
-            if (nPoint == 3)
+            var choosedScore = GetChoosedScore();
+            if (nPoint == choosedScore)
             {
-                MessageBox.Show(@"Datorn vann!");
+                NpcWin win = new NpcWin();
+                win.Show();
                 StartNewGame();
             }
-            if (pPoint == 3)
+            if (pPoint == choosedScore)
             {
-                MessageBox.Show(@"Du vann!");
+                PlayerWin win = new PlayerWin();
+                win.Show();
                 StartNewGame();
             }
         }
@@ -441,7 +477,8 @@ namespace Shotgun
             LblAmmoCountNpc.Text = "";
             LblPointsNPC.Text = "";
             LblPointsPlay.Text = "";
-            Application.Restart();
         }
+
+   
     }
 }

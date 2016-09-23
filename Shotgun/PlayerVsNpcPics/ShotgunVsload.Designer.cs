@@ -74,6 +74,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ShotgunVsLoad";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ShotgunVsload";
             this.Load += new System.EventHandler(this.ShotgunVsLoad_Load);
             this.ResumeLayout(false);

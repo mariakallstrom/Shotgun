@@ -41,13 +41,14 @@
             this.PicStart.Image = global::Shotgun.Properties.Resources.Startimage;
             this.PicStart.Location = new System.Drawing.Point(179, 56);
             this.PicStart.Name = "PicStart";
-            this.PicStart.Size = new System.Drawing.Size(213, 206);
+            this.PicStart.Size = new System.Drawing.Size(204, 204);
+            this.PicStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PicStart.TabIndex = 0;
             this.PicStart.TabStop = false;
             // 
             // BtnPlay
             // 
-            this.BtnPlay.Location = new System.Drawing.Point(169, 271);
+            this.BtnPlay.Location = new System.Drawing.Point(160, 386);
             this.BtnPlay.Name = "BtnPlay";
             this.BtnPlay.Size = new System.Drawing.Size(109, 46);
             this.BtnPlay.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // BtnQuit
             // 
-            this.BtnQuit.Location = new System.Drawing.Point(284, 271);
+            this.BtnQuit.Location = new System.Drawing.Point(275, 386);
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Size = new System.Drawing.Size(108, 46);
             this.BtnQuit.TabIndex = 2;
@@ -78,7 +79,7 @@
             // BtnGameRules
             // 
             this.BtnGameRules.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnGameRules.Location = new System.Drawing.Point(457, 271);
+            this.BtnGameRules.Location = new System.Drawing.Point(515, 389);
             this.BtnGameRules.Name = "BtnGameRules";
             this.BtnGameRules.Size = new System.Drawing.Size(114, 43);
             this.BtnGameRules.TabIndex = 7;
@@ -90,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 332);
+            this.ClientSize = new System.Drawing.Size(661, 444);
             this.Controls.Add(this.BtnGameRules);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.BtnQuit);

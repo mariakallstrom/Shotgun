@@ -31,6 +31,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -63,17 +64,28 @@
             this.label1.Size = new System.Drawing.Size(90, 90);
             this.label1.TabIndex = 3;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(108, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "+1skott till spelaren";
+            // 
             // LoadVsBlock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 109);
+            this.ClientSize = new System.Drawing.Size(344, 133);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LoadVsBlock";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoadVsBlock";
             this.Load += new System.EventHandler(this.LoadVsBlock_Load);
             this.ResumeLayout(false);
@@ -86,5 +98,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

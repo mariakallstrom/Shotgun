@@ -50,7 +50,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Image = global::Shotgun.Properties.Resources.Shotgun;
-            this.label2.Location = new System.Drawing.Point(287, 18);
+            this.label2.Location = new System.Drawing.Point(290, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 90);
             this.label2.TabIndex = 4;
@@ -67,13 +67,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 127);
+            this.ClientSize = new System.Drawing.Size(411, 125);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "BlockVsShotgun";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "BlockVsShotgun";
             this.Load += new System.EventHandler(this.BlockVsShotgun_Load);
             this.ResumeLayout(false);

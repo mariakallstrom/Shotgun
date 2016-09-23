@@ -1,6 +1,6 @@
-﻿namespace Shotgun
+﻿namespace Shotgun.PointForm
 {
-    partial class BlockVsBlock
+    partial class PlayerOnePoint
     {
         /// <summary>
         /// Required designer variable.
@@ -28,66 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Image = global::Shotgun.Properties.Resources.Block;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 90);
-            this.label1.TabIndex = 0;
-            // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Image = global::Shotgun.Properties.Resources.Block;
-            this.label2.Location = new System.Drawing.Point(266, 9);
+            this.label2.Image = global::Shotgun.Properties.Resources.OnePointToPlayer;
+            this.label2.Location = new System.Drawing.Point(12, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 90);
-            this.label2.TabIndex = 1;
+            this.label2.Size = new System.Drawing.Size(307, 272);
+            this.label2.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.Image = global::Shotgun.Properties.Resources.Startimage;
+            this.label1.Location = new System.Drawing.Point(403, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(306, 272);
+            this.label1.TabIndex = 5;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(147, 41);
+            this.label3.Location = new System.Drawing.Point(326, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 32);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "MOT";
+            this.label3.Size = new System.Drawing.Size(71, 32);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "TILL";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(139, 109);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(472, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Inget händer";
+            this.label4.Size = new System.Drawing.Size(127, 32);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "PLAYER";
             // 
-            // BlockVsBlock
+            // PlayerOnePoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 138);
+            this.ClientSize = new System.Drawing.Size(726, 370);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "BlockVsBlock";
+            this.Name = "PlayerOnePoint";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "BlockVsBlock";
-            this.Load += new System.EventHandler(this.BlockVsBlock_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PlayerOnePoint";
+            this.Load += new System.EventHandler(this.PlayerOnePoint_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

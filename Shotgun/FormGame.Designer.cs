@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnLoad = new System.Windows.Forms.Button();
-            this.BtnShoot = new System.Windows.Forms.Button();
-            this.BtnShotgun = new System.Windows.Forms.Button();
-            this.LblAmmo = new System.Windows.Forms.Label();
             this.PanelPlayer = new System.Windows.Forms.Panel();
             this.LblPointP = new System.Windows.Forms.Label();
             this.LblAmmoCountPlay = new System.Windows.Forms.Label();
             this.BtnBlock = new System.Windows.Forms.Button();
+            this.BtnShoot = new System.Windows.Forms.Button();
             this.LblPointsPlay = new System.Windows.Forms.Label();
+            this.BtnLoad = new System.Windows.Forms.Button();
+            this.LblAmmo = new System.Windows.Forms.Label();
             this.LblPlayer = new System.Windows.Forms.Label();
+            this.BtnShotgun = new System.Windows.Forms.Button();
             this.PanelNPC = new System.Windows.Forms.Panel();
             this.LblPointN = new System.Windows.Forms.Label();
             this.LblNpcIconLoad = new System.Windows.Forms.Label();
@@ -51,48 +51,11 @@
             this.LblVs = new System.Windows.Forms.Label();
             this.BtnStartGame = new System.Windows.Forms.Button();
             this.BtnQuit = new System.Windows.Forms.Button();
+            this.LblCooseScore = new System.Windows.Forms.Label();
+            this.TxtChoose = new System.Windows.Forms.TextBox();
             this.PanelPlayer.SuspendLayout();
             this.PanelNPC.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BtnLoad
-            // 
-            this.BtnLoad.Image = global::Shotgun.Properties.Resources.Reload;
-            this.BtnLoad.Location = new System.Drawing.Point(214, 208);
-            this.BtnLoad.Name = "BtnLoad";
-            this.BtnLoad.Size = new System.Drawing.Size(100, 100);
-            this.BtnLoad.TabIndex = 0;
-            this.BtnLoad.UseVisualStyleBackColor = true;
-            this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
-            // 
-            // BtnShoot
-            // 
-            this.BtnShoot.Image = global::Shotgun.Properties.Resources.Shoot;
-            this.BtnShoot.Location = new System.Drawing.Point(108, 208);
-            this.BtnShoot.Name = "BtnShoot";
-            this.BtnShoot.Size = new System.Drawing.Size(100, 100);
-            this.BtnShoot.TabIndex = 1;
-            this.BtnShoot.UseVisualStyleBackColor = true;
-            this.BtnShoot.Click += new System.EventHandler(this.BtnShoot_Click);
-            // 
-            // BtnShotgun
-            // 
-            this.BtnShotgun.Image = global::Shotgun.Properties.Resources.Shotgun;
-            this.BtnShotgun.Location = new System.Drawing.Point(3, 96);
-            this.BtnShotgun.Name = "BtnShotgun";
-            this.BtnShotgun.Size = new System.Drawing.Size(100, 100);
-            this.BtnShotgun.TabIndex = 2;
-            this.BtnShotgun.Text = "Shotgun";
-            this.BtnShotgun.UseVisualStyleBackColor = true;
-            this.BtnShotgun.Click += new System.EventHandler(this.BtnShotgun_Click);
-            // 
-            // LblAmmo
-            // 
-            this.LblAmmo.Image = global::Shotgun.Properties.Resources.Bullet;
-            this.LblAmmo.Location = new System.Drawing.Point(168, 4);
-            this.LblAmmo.Name = "LblAmmo";
-            this.LblAmmo.Size = new System.Drawing.Size(80, 80);
-            this.LblAmmo.TabIndex = 3;
             // 
             // PanelPlayer
             // 
@@ -105,15 +68,15 @@
             this.PanelPlayer.Controls.Add(this.LblAmmo);
             this.PanelPlayer.Controls.Add(this.LblPlayer);
             this.PanelPlayer.Controls.Add(this.BtnShotgun);
-            this.PanelPlayer.Location = new System.Drawing.Point(31, 53);
+            this.PanelPlayer.Location = new System.Drawing.Point(31, 66);
             this.PanelPlayer.Name = "PanelPlayer";
-            this.PanelPlayer.Size = new System.Drawing.Size(323, 323);
+            this.PanelPlayer.Size = new System.Drawing.Size(400, 400);
             this.PanelPlayer.TabIndex = 4;
             // 
             // LblPointP
             // 
             this.LblPointP.AutoSize = true;
-            this.LblPointP.Location = new System.Drawing.Point(69, 4);
+            this.LblPointP.Location = new System.Drawing.Point(18, 8);
             this.LblPointP.Name = "LblPointP";
             this.LblPointP.Size = new System.Drawing.Size(55, 20);
             this.LblPointP.TabIndex = 13;
@@ -124,7 +87,7 @@
             this.LblAmmoCountPlay.BackColor = System.Drawing.SystemColors.Control;
             this.LblAmmoCountPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LblAmmoCountPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAmmoCountPlay.Location = new System.Drawing.Point(254, 0);
+            this.LblAmmoCountPlay.Location = new System.Drawing.Point(337, 4);
             this.LblAmmoCountPlay.Name = "LblAmmoCountPlay";
             this.LblAmmoCountPlay.Size = new System.Drawing.Size(60, 60);
             this.LblAmmoCountPlay.TabIndex = 7;
@@ -133,33 +96,72 @@
             // BtnBlock
             // 
             this.BtnBlock.BackgroundImage = global::Shotgun.Properties.Resources.Block;
-            this.BtnBlock.Location = new System.Drawing.Point(3, 208);
+            this.BtnBlock.Location = new System.Drawing.Point(13, 269);
             this.BtnBlock.Name = "BtnBlock";
-            this.BtnBlock.Size = new System.Drawing.Size(100, 100);
+            this.BtnBlock.Size = new System.Drawing.Size(109, 110);
             this.BtnBlock.TabIndex = 6;
             this.BtnBlock.UseVisualStyleBackColor = true;
             this.BtnBlock.Click += new System.EventHandler(this.BtnBlock_Click);
+            // 
+            // BtnShoot
+            // 
+            this.BtnShoot.Image = global::Shotgun.Properties.Resources.Shoot;
+            this.BtnShoot.Location = new System.Drawing.Point(131, 264);
+            this.BtnShoot.Name = "BtnShoot";
+            this.BtnShoot.Size = new System.Drawing.Size(120, 120);
+            this.BtnShoot.TabIndex = 1;
+            this.BtnShoot.UseVisualStyleBackColor = true;
+            this.BtnShoot.Click += new System.EventHandler(this.BtnShoot_Click);
             // 
             // LblPointsPlay
             // 
             this.LblPointsPlay.BackColor = System.Drawing.SystemColors.Control;
             this.LblPointsPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LblPointsPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPointsPlay.Location = new System.Drawing.Point(3, 4);
+            this.LblPointsPlay.Location = new System.Drawing.Point(13, 44);
             this.LblPointsPlay.Name = "LblPointsPlay";
             this.LblPointsPlay.Size = new System.Drawing.Size(60, 60);
             this.LblPointsPlay.TabIndex = 8;
             this.LblPointsPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BtnLoad
+            // 
+            this.BtnLoad.Image = global::Shotgun.Properties.Resources.Reload;
+            this.BtnLoad.Location = new System.Drawing.Point(257, 264);
+            this.BtnLoad.Name = "BtnLoad";
+            this.BtnLoad.Size = new System.Drawing.Size(120, 120);
+            this.BtnLoad.TabIndex = 0;
+            this.BtnLoad.UseVisualStyleBackColor = true;
+            this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
+            // 
+            // LblAmmo
+            // 
+            this.LblAmmo.Image = global::Shotgun.Properties.Resources.Bullet2;
+            this.LblAmmo.Location = new System.Drawing.Point(231, 8);
+            this.LblAmmo.Name = "LblAmmo";
+            this.LblAmmo.Size = new System.Drawing.Size(100, 100);
+            this.LblAmmo.TabIndex = 3;
+            // 
             // LblPlayer
             // 
             this.LblPlayer.AutoSize = true;
             this.LblPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPlayer.Location = new System.Drawing.Point(128, 121);
+            this.LblPlayer.Location = new System.Drawing.Point(169, 178);
             this.LblPlayer.Name = "LblPlayer";
             this.LblPlayer.Size = new System.Drawing.Size(146, 32);
             this.LblPlayer.TabIndex = 8;
             this.LblPlayer.Text = "SPELARE";
+            // 
+            // BtnShotgun
+            // 
+            this.BtnShotgun.Image = global::Shotgun.Properties.Resources.Shotgun;
+            this.BtnShotgun.Location = new System.Drawing.Point(2, 138);
+            this.BtnShotgun.Name = "BtnShotgun";
+            this.BtnShotgun.Size = new System.Drawing.Size(120, 120);
+            this.BtnShotgun.TabIndex = 2;
+            this.BtnShotgun.Text = "Shotgun";
+            this.BtnShotgun.UseVisualStyleBackColor = true;
+            this.BtnShotgun.Click += new System.EventHandler(this.BtnShotgun_Click);
             // 
             // PanelNPC
             // 
@@ -172,15 +174,15 @@
             this.PanelNPC.Controls.Add(this.LblAmmoCountNpc);
             this.PanelNPC.Controls.Add(this.LblNumOfAmmoNPC);
             this.PanelNPC.Controls.Add(this.LblPointsNPC);
-            this.PanelNPC.Location = new System.Drawing.Point(392, 53);
+            this.PanelNPC.Location = new System.Drawing.Point(509, 70);
             this.PanelNPC.Name = "PanelNPC";
-            this.PanelNPC.Size = new System.Drawing.Size(343, 323);
+            this.PanelNPC.Size = new System.Drawing.Size(400, 396);
             this.PanelNPC.TabIndex = 7;
             // 
             // LblPointN
             // 
             this.LblPointN.AutoSize = true;
-            this.LblPointN.Location = new System.Drawing.Point(211, 4);
+            this.LblPointN.Location = new System.Drawing.Point(333, 4);
             this.LblPointN.Name = "LblPointN";
             this.LblPointN.Size = new System.Drawing.Size(55, 20);
             this.LblPointN.TabIndex = 14;
@@ -189,40 +191,40 @@
             // LblNpcIconLoad
             // 
             this.LblNpcIconLoad.Image = global::Shotgun.Properties.Resources.Reload;
-            this.LblNpcIconLoad.Location = new System.Drawing.Point(11, 208);
+            this.LblNpcIconLoad.Location = new System.Drawing.Point(11, 264);
             this.LblNpcIconLoad.Name = "LblNpcIconLoad";
-            this.LblNpcIconLoad.Size = new System.Drawing.Size(100, 100);
+            this.LblNpcIconLoad.Size = new System.Drawing.Size(120, 120);
             this.LblNpcIconLoad.TabIndex = 16;
             // 
             // LblNpcIconShoot
             // 
             this.LblNpcIconShoot.Image = global::Shotgun.Properties.Resources.Shoot;
-            this.LblNpcIconShoot.Location = new System.Drawing.Point(117, 208);
+            this.LblNpcIconShoot.Location = new System.Drawing.Point(137, 264);
             this.LblNpcIconShoot.Name = "LblNpcIconShoot";
-            this.LblNpcIconShoot.Size = new System.Drawing.Size(100, 100);
+            this.LblNpcIconShoot.Size = new System.Drawing.Size(120, 120);
             this.LblNpcIconShoot.TabIndex = 15;
             // 
             // LblNpcIconBlock
             // 
             this.LblNpcIconBlock.Image = global::Shotgun.Properties.Resources.Block;
-            this.LblNpcIconBlock.Location = new System.Drawing.Point(232, 208);
+            this.LblNpcIconBlock.Location = new System.Drawing.Point(277, 264);
             this.LblNpcIconBlock.Name = "LblNpcIconBlock";
-            this.LblNpcIconBlock.Size = new System.Drawing.Size(100, 100);
+            this.LblNpcIconBlock.Size = new System.Drawing.Size(120, 120);
             this.LblNpcIconBlock.TabIndex = 14;
             // 
             // LblNpcIconShotgun
             // 
             this.LblNpcIconShotgun.Image = global::Shotgun.Properties.Resources.Shotgun;
-            this.LblNpcIconShotgun.Location = new System.Drawing.Point(194, 96);
+            this.LblNpcIconShotgun.Location = new System.Drawing.Point(268, 144);
             this.LblNpcIconShotgun.Name = "LblNpcIconShotgun";
-            this.LblNpcIconShotgun.Size = new System.Drawing.Size(100, 100);
+            this.LblNpcIconShotgun.Size = new System.Drawing.Size(120, 120);
             this.LblNpcIconShotgun.TabIndex = 13;
             // 
             // LblComputer
             // 
             this.LblComputer.AutoSize = true;
             this.LblComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblComputer.Location = new System.Drawing.Point(26, 121);
+            this.LblComputer.Location = new System.Drawing.Point(135, 178);
             this.LblComputer.Name = "LblComputer";
             this.LblComputer.Size = new System.Drawing.Size(113, 32);
             this.LblComputer.TabIndex = 10;
@@ -232,7 +234,7 @@
             // 
             this.LblAmmoCountNpc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LblAmmoCountNpc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAmmoCountNpc.Location = new System.Drawing.Point(3, 0);
+            this.LblAmmoCountNpc.Location = new System.Drawing.Point(3, 4);
             this.LblAmmoCountNpc.Name = "LblAmmoCountNpc";
             this.LblAmmoCountNpc.Size = new System.Drawing.Size(60, 60);
             this.LblAmmoCountNpc.TabIndex = 7;
@@ -240,10 +242,10 @@
             // 
             // LblNumOfAmmoNPC
             // 
-            this.LblNumOfAmmoNPC.Image = global::Shotgun.Properties.Resources.Bullet;
+            this.LblNumOfAmmoNPC.Image = global::Shotgun.Properties.Resources.Bullet2;
             this.LblNumOfAmmoNPC.Location = new System.Drawing.Point(69, 4);
             this.LblNumOfAmmoNPC.Name = "LblNumOfAmmoNPC";
-            this.LblNumOfAmmoNPC.Size = new System.Drawing.Size(80, 80);
+            this.LblNumOfAmmoNPC.Size = new System.Drawing.Size(100, 100);
             this.LblNumOfAmmoNPC.TabIndex = 6;
             // 
             // LblPointsNPC
@@ -251,7 +253,7 @@
             this.LblPointsNPC.BackColor = System.Drawing.SystemColors.Control;
             this.LblPointsNPC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LblPointsNPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPointsNPC.Location = new System.Drawing.Point(272, 4);
+            this.LblPointsNPC.Location = new System.Drawing.Point(328, 40);
             this.LblPointsNPC.Name = "LblPointsNPC";
             this.LblPointsNPC.Size = new System.Drawing.Size(60, 60);
             this.LblPointsNPC.TabIndex = 9;
@@ -261,18 +263,18 @@
             // 
             this.LblVs.AutoSize = true;
             this.LblVs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblVs.Location = new System.Drawing.Point(342, 174);
+            this.LblVs.Location = new System.Drawing.Point(437, 247);
             this.LblVs.Name = "LblVs";
-            this.LblVs.Size = new System.Drawing.Size(44, 29);
+            this.LblVs.Size = new System.Drawing.Size(68, 29);
             this.LblVs.TabIndex = 9;
-            this.LblVs.Text = "VS";
+            this.LblVs.Text = "MOT";
             // 
             // BtnStartGame
             // 
             this.BtnStartGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnStartGame.Location = new System.Drawing.Point(31, 385);
+            this.BtnStartGame.Location = new System.Drawing.Point(398, 479);
             this.BtnStartGame.Name = "BtnStartGame";
-            this.BtnStartGame.Size = new System.Drawing.Size(114, 43);
+            this.BtnStartGame.Size = new System.Drawing.Size(163, 43);
             this.BtnStartGame.TabIndex = 11;
             this.BtnStartGame.Text = "Starta Spel";
             this.BtnStartGame.UseVisualStyleBackColor = true;
@@ -281,7 +283,7 @@
             // BtnQuit
             // 
             this.BtnQuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnQuit.Location = new System.Drawing.Point(721, 385);
+            this.BtnQuit.Location = new System.Drawing.Point(822, 472);
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Size = new System.Drawing.Size(127, 43);
             this.BtnQuit.TabIndex = 12;
@@ -289,11 +291,31 @@
             this.BtnQuit.UseVisualStyleBackColor = true;
             this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
+            // LblCooseScore
+            // 
+            this.LblCooseScore.AutoSize = true;
+            this.LblCooseScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCooseScore.Location = new System.Drawing.Point(12, 486);
+            this.LblCooseScore.Name = "LblCooseScore";
+            this.LblCooseScore.Size = new System.Drawing.Size(328, 25);
+            this.LblCooseScore.TabIndex = 13;
+            this.LblCooseScore.Text = "Välj hur många poäng du vill köra till:";
+            // 
+            // TxtChoose
+            // 
+            this.TxtChoose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtChoose.Location = new System.Drawing.Point(341, 485);
+            this.TxtChoose.Name = "TxtChoose";
+            this.TxtChoose.Size = new System.Drawing.Size(39, 30);
+            this.TxtChoose.TabIndex = 14;
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 440);
+            this.ClientSize = new System.Drawing.Size(961, 527);
+            this.Controls.Add(this.TxtChoose);
+            this.Controls.Add(this.LblCooseScore);
             this.Controls.Add(this.BtnQuit);
             this.Controls.Add(this.BtnStartGame);
             this.Controls.Add(this.LblVs);
@@ -336,5 +358,7 @@
         private System.Windows.Forms.Label LblNpcIconShoot;
         private System.Windows.Forms.Label LblNpcIconBlock;
         private System.Windows.Forms.Label LblNpcIconShotgun;
+        private System.Windows.Forms.Label LblCooseScore;
+        private System.Windows.Forms.TextBox TxtChoose;
     }
 }

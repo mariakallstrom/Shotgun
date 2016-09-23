@@ -31,6 +31,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -50,7 +51,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Image = global::Shotgun.Properties.Resources.Reload;
-            this.label2.Location = new System.Drawing.Point(271, 8);
+            this.label2.Location = new System.Drawing.Point(273, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 90);
             this.label2.TabIndex = 4;
@@ -63,17 +64,28 @@
             this.label1.Size = new System.Drawing.Size(90, 90);
             this.label1.TabIndex = 3;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(121, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "+1 skott till datorn";
+            // 
             // BlockVsLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 107);
+            this.ClientSize = new System.Drawing.Size(379, 138);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "BlockVsLoad";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "BlockVsLoad";
             this.Load += new System.EventHandler(this.BlockVsLoad_Load);
             this.ResumeLayout(false);
@@ -86,5 +98,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }
