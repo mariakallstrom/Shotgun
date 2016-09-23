@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Shotgun
 {
-    public partial class Form1 : Form
+    public partial class FormRules : Form
     {
-        public Form1()
+        public FormRules()
         {
             InitializeComponent();
         }
