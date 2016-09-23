@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStart));
             this.PicStart = new System.Windows.Forms.PictureBox();
             this.BtnPlay = new System.Windows.Forms.Button();
             this.BtnQuit = new System.Windows.Forms.Button();
@@ -39,7 +38,7 @@
             // 
             // PicStart
             // 
-            this.PicStart.Image = ((System.Drawing.Image)(resources.GetObject("PicStart.Image")));
+            this.PicStart.Image = global::Shotgun.Properties.Resources.Startimage;
             this.PicStart.Location = new System.Drawing.Point(179, 56);
             this.PicStart.Name = "PicStart";
             this.PicStart.Size = new System.Drawing.Size(213, 206);

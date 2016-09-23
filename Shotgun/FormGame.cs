@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Shotgun.PlayerVsNpcPics;
 
 //npcBlock = 1;
 //npcShoot = 2;
@@ -120,23 +121,27 @@ namespace Shotgun
 
             if (pBlock == npc)
             {
-                MessageBox.Show(@"Blocka mot Blocka!");
+                BlockVsBlock load = new BlockVsBlock();
+                    load.Show();
             }
             else
             {
                 if (npc == 3)
                 {
-                    MessageBox.Show(@"Blocka mot Ladda");
+                   BlockVsLoad load = new BlockVsLoad();
+                    load.Show();
                     NpcGetAmmo();
                 }
                 else if (npc == 2)
                 {
-                    MessageBox.Show(@"Blocka mot Skjuta");
+                    BlockVsShoot load = new BlockVsShoot();
+                    load.Show();
                     NpcLooseAmmo();
                 }
                 else if (npc == 4)
                 {
-                    MessageBox.Show(@"Blocka ot Shotgun, datorn fick poäng!");
+                    BlockVsShotgun load = new BlockVsShotgun();
+                    load.Show();
                     NpcWinPoint();
                     SetAmmoStartGame();
                 }
@@ -147,7 +152,8 @@ namespace Shotgun
             var pShoot = PlayerShoot();
             if (pShoot == npc)
             {
-                MessageBox.Show(@"Skjuta mot skjuta");
+                ShootVsShoot load = new ShootVsShoot();
+                load.Show();
                 NpcLooseAmmo();
                 PlayerLooseAmmo();
             }
@@ -157,18 +163,21 @@ namespace Shotgun
                 {
                     if (npc == 1)
                     {
-                        MessageBox.Show(@"Skjuta mot Blocka");
+                        ShootVsBlock load = new ShootVsBlock();
+                        load.Show();
                         PlayerLooseAmmo();
                     }
                     else if (npc == 3)
                     {
-                        MessageBox.Show(@"Skjuta mot ladda. Du fick poäng!");
+                        ShootVsLoad load = new ShootVsLoad();
+                        load.Show();
                         PlayerWinPoint();
                         SetAmmoStartGame();
                     }
                     else if (npc == 4)
                     {
-                        MessageBox.Show(@"Datorn fick poäng!");
+                        ShotgunVSShotgun load = new ShotgunVSShotgun();
+                        load.Show();
                         NpcWinPoint();
                         SetAmmoStartGame();
                     }
@@ -181,6 +190,8 @@ namespace Shotgun
         {
             if (PlayerLoad() == npc)
             {
+                LoadVsLoad load = new LoadVsLoad();
+                load.Show();
                 PlayerGetAmmo();
                 NpcGetAmmo();
             }
@@ -188,18 +199,21 @@ namespace Shotgun
             {
                 if (npc == 1)
                 {
-                    MessageBox.Show(@"Ladda mot Blocka");
+                    LoadVsBlock load = new LoadVsBlock();
+                    load.Show();
                     PlayerGetAmmo();
                 }
                 else if (npc == 2)
                 {
-                    MessageBox.Show(@"Ladda mot skjuta. Datorn fick poäng!");
+                   LoadVsShoot load = new LoadVsShoot();
+                    load.Show();
                     NpcWinPoint();
                     SetAmmoStartGame();
                 }
                 else if (npc == 4)
                 {
-                    MessageBox.Show(@"Ladda mot shotgun. Datorn fick poäng!");
+                   LoadVsShotgun load = new LoadVsShotgun();
+                    load.Show();
                     NpcWinPoint();
                     SetAmmoStartGame();
                 }
@@ -210,7 +224,8 @@ namespace Shotgun
         {
             if (PlayerShotgun() == npc)
             {
-                MessageBox.Show(@"Shotgun mot Shotgun");
+                ShotgunVSShotgun load = new ShotgunVSShotgun();
+                load.Show();
                 PlayerLooseAmmo();
                 NpcLooseAmmo();
             }
@@ -219,19 +234,22 @@ namespace Shotgun
            
             if (npc == 1)
                 {
-                    MessageBox.Show(@"Shotgun mot blocka! Du fick poäng!");
+                    ShotgunVsBlock load = new ShotgunVsBlock();
+                    load.Show();
                     PlayerWinPoint();
                     SetAmmoStartGame();
                 }
                 else if (npc == 2)
                 {
-                    MessageBox.Show(@"Shotgun mot Skjuta! Du fick poäng!");
+                   ShotgunVsShoot load = new ShotgunVsShoot();
+                    load.Show();
                    PlayerWinPoint();
                     SetAmmoStartGame();
                 }
                 else if (npc == 3)
                 {
-                    MessageBox.Show(@"Shotgun mot Ladda! Du fick poäng!");
+                   ShotgunVsLoad load = new ShotgunVsLoad();
+                    load.Show();
                    PlayerWinPoint();
                     SetAmmoStartGame();
                 }
@@ -423,9 +441,7 @@ namespace Shotgun
             LblAmmoCountNpc.Text = "";
             LblPointsNPC.Text = "";
             LblPointsPlay.Text = "";
-            Application.Run(this);
+            Application.Restart();
         }
-
-
     }
 }
