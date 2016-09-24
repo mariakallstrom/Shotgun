@@ -83,9 +83,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "LoadVsLoad";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "LoadVsLoad";
             this.Load += new System.EventHandler(this.LoadVsLoad_Load);
             this.ResumeLayout(false);

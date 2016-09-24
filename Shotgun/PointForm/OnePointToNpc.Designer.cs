@@ -38,7 +38,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(438, 9);
+            this.label4.Location = new System.Drawing.Point(397, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 32);
             this.label4.TabIndex = 12;
@@ -48,7 +48,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(309, 154);
+            this.label3.Location = new System.Drawing.Point(262, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 32);
             this.label3.TabIndex = 11;
@@ -56,25 +56,25 @@
             // 
             // label2
             // 
-            this.label2.Image = global::Shotgun.Properties.Resources.OnePointToPlayer;
-            this.label2.Location = new System.Drawing.Point(-4, 55);
+            this.label2.Image = global::Shotgun.Properties.Resources.OnePoint;
+            this.label2.Location = new System.Drawing.Point(12, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(307, 272);
+            this.label2.Size = new System.Drawing.Size(244, 225);
             this.label2.TabIndex = 10;
             // 
             // label1
             // 
-            this.label1.Image = global::Shotgun.Properties.Resources.Computer;
-            this.label1.Location = new System.Drawing.Point(386, 67);
+            this.label1.Image = global::Shotgun.Properties.Resources.Computer2;
+            this.label1.Location = new System.Drawing.Point(339, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 272);
+            this.label1.Size = new System.Drawing.Size(217, 193);
             this.label1.TabIndex = 9;
             // 
             // OnePointToNpc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 336);
+            this.ClientSize = new System.Drawing.Size(592, 283);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

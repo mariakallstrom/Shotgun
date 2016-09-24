@@ -20,7 +20,7 @@ namespace Shotgun
        private void BlockVsBlock_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
-            timer.Interval = 10000;
+            timer.Interval = 2000;
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
         }

@@ -83,9 +83,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "ShootVsBlock";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ShootVsBlock";
             this.Load += new System.EventHandler(this.ShootVsBlock_Load);
             this.ResumeLayout(false);

@@ -25,6 +25,7 @@ namespace Shotgun
         {
             SetAmmoStartGame();
             SetPointNewGame();
+            GetChoosedScore();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)
@@ -479,6 +480,5 @@ namespace Shotgun
             LblPointsPlay.Text = "";
         }
 
-   
     }
 }

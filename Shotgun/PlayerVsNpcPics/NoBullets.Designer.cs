@@ -33,22 +33,23 @@
             // 
             // label1
             // 
-            this.label1.Image = global::Shotgun.Properties.Resources.NoBullets;
+            this.label1.Image = global::Shotgun.Properties.Resources.NoBullets1;
             this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 226);
+            this.label1.Size = new System.Drawing.Size(317, 294);
             this.label1.TabIndex = 0;
             // 
             // NoBullets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.ClientSize = new System.Drawing.Size(353, 312);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "NoBullets";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "NoBullets";
             this.Load += new System.EventHandler(this.NoBullets_Load);
             this.ResumeLayout(false);
