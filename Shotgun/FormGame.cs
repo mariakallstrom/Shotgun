@@ -106,6 +106,11 @@ namespace Shotgun
            
         }
 
+        private void BtnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         public void SetAmmoStartGame()
         {
             SetNpcAmmo(0);
@@ -117,6 +122,55 @@ namespace Shotgun
         {
             SetNpcPoints(0);
             SetPlayersPoint(0);
+        }
+
+        public int GetChoosedScore()
+        {
+            if (TxtChoose.Text == "")
+            {
+                SetChoosedScore(3);
+            }
+            var choosedScore = int.Parse(TxtChoose.Text);
+            return choosedScore;
+        }
+
+        public void SetChoosedScore(int choosedScore)
+        {
+            TxtChoose.Text = choosedScore.ToString();
+        }
+
+        public int Npc()
+        {
+            var nAmmo = GetNpcAmmo();
+            var x = 0;
+            if (nAmmo == 0)
+            {
+                return 3;
+            }
+            Random random = new Random();
+            var r = random.Next(1, 4);
+
+            if (r == 1)
+            {
+                x = 1;
+            }
+            else if (r == 2)
+            {
+                x = 2;
+            }
+            else if (r == 3)
+            {
+                x = 3;
+            }
+            else if (r == 4 && nAmmo <= 3)
+            {
+                x = 4;
+            }
+            else
+            {
+                Npc();
+            }
+            return x;
         }
 
         public void PlayerBlocksComputer(int npc)
@@ -155,6 +209,7 @@ namespace Shotgun
                 }
             }
         }
+
         public void PlayerShootsComputer(int npc)
         {
             OnePointToNpc point = new OnePointToNpc();
@@ -292,7 +347,6 @@ namespace Shotgun
 
         public int PlayerShotgun()
         {
-            
                 return 4;
         }
 
@@ -322,40 +376,6 @@ namespace Shotgun
             var nAmmo = GetNpcAmmo();
             nAmmo--;
             SetNpcAmmo(nAmmo);
-        }
-
-        public int Npc()
-        {
-            var nAmmo = GetNpcAmmo();
-            var x = 0;
-            if (nAmmo == 0)
-            {
-                return 3;
-            }
-            Random random = new Random();
-            var r = random.Next(1, 4);
-
-            if (r == 1)
-            {
-                x = 1;
-            }
-            else if (r == 2)
-            {
-                x = 2;
-            }
-            else if (r == 3)
-            {
-                x = 3;
-            }
-            else if (r == 4 && nAmmo <= 3)
-            {
-                x = 4;
-            }
-            else
-            {
-                Npc();
-            }
-            return x;
         }
 
         public int GetNpcAmmo()
@@ -391,11 +411,6 @@ namespace Shotgun
         public void SetPlayerAmmo(int pAmmo)
         {
             LblAmmoCountPlay.Text = pAmmo.ToString();
-        }
-
-        private void BtnQuit_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         public int GetPlayerPoints()
@@ -437,21 +452,6 @@ namespace Shotgun
             PointsCount();
         }
 
-        public int GetChoosedScore()
-        {
-            if (TxtChoose.Text == "")
-            {
-                SetChoosedScore(3);
-            }
-            var choosedScore = int.Parse(TxtChoose.Text);
-            return choosedScore;
-        }
-
-        public void SetChoosedScore(int choosedScore)
-        {
-            TxtChoose.Text = choosedScore.ToString();
-        }
-
         public void PointsCount()
         {
             var nPoint = GetNpcPoints();
@@ -479,6 +479,5 @@ namespace Shotgun
             LblPointsNPC.Text = "";
             LblPointsPlay.Text = "";
         }
-
     }
 }
