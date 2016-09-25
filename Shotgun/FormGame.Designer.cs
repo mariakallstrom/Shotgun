@@ -388,7 +388,7 @@
         private System.Windows.Forms.Label LblNpcIconBlock;
         private System.Windows.Forms.Label LblNpcIconShotgun;
         private System.Windows.Forms.Label LblCooseScore;
-        private System.Windows.Forms.TextBox TxtChoose;
+        public System.Windows.Forms.TextBox TxtChoose;
         private System.Windows.Forms.PictureBox PicBoxNpc;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

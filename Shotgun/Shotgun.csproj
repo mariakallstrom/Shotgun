@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameCode.cs" />
+    <Compile Include="GetAndSet.cs" />
     <Compile Include="PlayerVsNpcPics\LoadVsLoad.cs">
       <SubType>Form</SubType>
     </Compile>
