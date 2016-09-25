@@ -46,6 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameCode.cs" />
+    <Compile Include="GetAndSet.cs" />
+    <Compile Include="PlayerVsNpcPics\LoadVsLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\LoadVsLoad.Designer.cs">
+      <DependentUpon>LoadVsLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\LoadVsShotgun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\LoadVsShotgun.Designer.cs">
+      <DependentUpon>LoadVsShotgun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsBlock.Designer.cs">
+      <DependentUpon>BlockVsBlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRules.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,8 +84,125 @@
     <Compile Include="FormGame.Designer.cs">
       <DependentUpon>FormGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsLoad.Designer.cs">
+      <DependentUpon>BlockVsLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsShoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsShoot.Designer.cs">
+      <DependentUpon>BlockVsShoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsShotgun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\BlockVsShotgun.Designer.cs">
+      <DependentUpon>BlockVsShotgun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\LoadVsBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\LoadVsBlock.Designer.cs">
+      <DependentUpon>LoadVsBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\LoadVsShoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\LoadVsShoot.Designer.cs">
+      <DependentUpon>LoadVsShoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\NoBullets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\NoBullets.Designer.cs">
+      <DependentUpon>NoBullets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointForm\OnePointToNpc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointForm\OnePointToNpc.Designer.cs">
+      <DependentUpon>OnePointToNpc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShootVsLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShootVsLoad.Designer.cs">
+      <DependentUpon>ShootVsLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShootVsShoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShootVsShoot.Designer.cs">
+      <DependentUpon>ShootVsShoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShootVsShotgun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShootVsShotgun.Designer.cs">
+      <DependentUpon>ShootVsShotgun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVsLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVsLoad.Designer.cs">
+      <DependentUpon>ShotgunVsLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVsShoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVsShoot.Designer.cs">
+      <DependentUpon>ShotgunVsShoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVSShotgun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVSShotgun.Designer.cs">
+      <DependentUpon>ShotgunVSShotgun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointForm\NpcWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointForm\NpcWin.Designer.cs">
+      <DependentUpon>NpcWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointForm\PlayerOnePoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointForm\PlayerOnePoint.Designer.cs">
+      <DependentUpon>PlayerOnePoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointForm\PlayerWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointForm\PlayerWin.Designer.cs">
+      <DependentUpon>PlayerWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PlayerVsNpcPics\ShootVsBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShootVsBlock.Designer.cs">
+      <DependentUpon>ShootVsBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVsBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerVsNpcPics\ShotgunVsBlock.Designer.cs">
+      <DependentUpon>ShotgunVsBlock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PlayerVsNpcPics\LoadVsLoad.resx">
+      <DependentUpon>LoadVsLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\LoadVsShotgun.resx">
+      <DependentUpon>LoadVsShotgun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\BlockVsBlock.resx">
+      <DependentUpon>BlockVsBlock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGame.resx">
       <DependentUpon>FormGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +212,54 @@
     <EmbeddedResource Include="FormStart.resx">
       <DependentUpon>FormStart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\BlockVsLoad.resx">
+      <DependentUpon>BlockVsLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\BlockVsShoot.resx">
+      <DependentUpon>BlockVsShoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\BlockVsShotgun.resx">
+      <DependentUpon>BlockVsShotgun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\LoadVsBlock.resx">
+      <DependentUpon>LoadVsBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\LoadVsShoot.resx">
+      <DependentUpon>LoadVsShoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\NoBullets.resx">
+      <DependentUpon>NoBullets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointForm\OnePointToNpc.resx">
+      <DependentUpon>OnePointToNpc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShootVsLoad.resx">
+      <DependentUpon>ShootVsLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShootVsShoot.resx">
+      <DependentUpon>ShootVsShoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShootVsShotgun.resx">
+      <DependentUpon>ShootVsShotgun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShotgunVsLoad.resx">
+      <DependentUpon>ShotgunVsLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShotgunVsShoot.resx">
+      <DependentUpon>ShotgunVsShoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShotgunVSShotgun.resx">
+      <DependentUpon>ShotgunVSShotgun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointForm\NpcWin.resx">
+      <DependentUpon>NpcWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointForm\PlayerOnePoint.resx">
+      <DependentUpon>PlayerOnePoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointForm\PlayerWin.resx">
+      <DependentUpon>PlayerWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,7 +268,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShootVsBlock.resx">
+      <DependentUpon>ShootVsBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerVsNpcPics\ShotgunVsBlock.resx">
+      <DependentUpon>ShotgunVsBlock.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +288,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Block.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reload.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shoot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shotgun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Startimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerWin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnePointToPlayer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoBullets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnePoint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Player.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Player1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoBullets1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
